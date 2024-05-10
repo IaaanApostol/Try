@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script language = "JavaScript">
+        var play = prompt ("Choose a Function from 1 to 3");
+        switch(play)
+{
+case"1" : one(); break;
+case"2" : two(); break;
+case"3" : three(); break;
+default: alert("invalid");
+
+
+}
+        function one()
+        {
+            var num1 = prompt ('Input 1', '');
+    var num2 = prompt ('Input 2', ''); 
+    var num3 = prompt ('Input 3', ''); 
+    
+    if (parseInt(num1) > parseInt(num2) && parseInt(num1) > parseInt(num3))
+    {
+	document.write('Input num: ' + num1 +'<br>');
+	document.write('Input num: ' + num2 +'<br>');
+	document.write('Input num: ' + num3 +'<br>');
+    document.write('The highest number is ' + num1 +'<br>');
+	
+    }
+
+    if (parseInt(num2) > parseInt(num1) && parseInt(num2) > parseInt(num3))
+    {
+	document.write('Input num: ' + num1 +'<br>');
+	document.write('Input num: ' + num2 +'<br>');
+	document.write('Input num: ' + num3 +'<br>');
+    document.write('The highest number is ' + num2 +'<br>');
+    }
+
+    if (parseInt(num3) > parseInt(num1) && parseInt(num3) > parseInt(num2))
+    {
+	document.write('Input num: ' + num1 +'<br>');
+	document.write('Input num: ' + num2 +'<br>');
+	document.write('Input num: ' + num3 +'<br>');
+    document.write('The highest number is ' + num3 +'<br>');
+    }
+
+    if (parseInt(num1) == parseInt(num2) && parseInt(num1) == parseInt(num3))
+{
+    document.write("input 1 is: "+ num1 + '<br>');
+document.write("input 2 is: "+ num2 + '<br>');
+document.write("input 3 is: "+ num3 + '<br>');
+document.write('All numbers are equal');
+
+}
+    
+   
+        }
+        function two()
+        {
+            
+            var num = prompt("Input a number:");
+
+var table = document.createElement("table");
+
+for (var i = 0; i < num; i++) {
+var tr = document.createElement("tr");
+for (var j = 0; j < num; j++) {
+var td = document.createElement("td");
+td.textContent = "*";
+tr.appendChild(td);
+}
+table.appendChild(tr);
+}
+document.write("Input number is " +num+ '<br>');
+document.body.appendChild(table);
+
+        }
+        function three()
+        {
+            function isOddEven(n)
+{
+if (n % 2 == 0)
+return "The inputted number is even";
+else
+return "The inputted number is odd";
+}
+var num = prompt("Input a number:");
+num = parseInt(num);
+var result = isOddEven(num);
+alert(result);
+
+        }
+    </script>
+</body>
+</html>
